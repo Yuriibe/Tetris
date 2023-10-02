@@ -1,7 +1,0 @@
-WIP:
-Kollision seitlich in Blöcke rein
-Kollision wenn Blöcke in zwischen Blöcke geschoben wird
-
-BUGS:
-Gameover *
-Nach MoveRow ändert sich die Farbe von allen Blöcken

@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7fe36ad-c072-4ee7-84e9-41e802de8991" name="Changes" comment="" />
+    <list default="true" id="d7fe36ad-c072-4ee7-84e9-41e802de8991" name="Changes" comment="init commit">
+      <change beforePath="$PROJECT_DIR$/Copys/Theorie.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copys/WebWorker.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copys/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WIP" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +26,10 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -36,7 +45,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Chalupka/Desktop/Ausbildung/Javascript/Flood-Fill",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Chalupka/Desktop/Tetris",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -82,10 +92,23 @@
       <workItem from="1664866642110" duration="21856000" />
       <workItem from="1664953109717" duration="23879000" />
       <workItem from="1695997664999" duration="341000" />
+      <workItem from="1696247761571" duration="608000" />
     </task>
+    <task id="LOCAL-00001" summary="init commit">
+      <created>1696247868676</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696247868677</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
   </component>
 </project>
