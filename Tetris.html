@@ -1,0 +1,679 @@
+<!--
+@Author Alexander Chalupka
+@Title Tetris
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris Playground</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body onclick="music()">
+<h1 id="title"><span id=titleT" style="color: #fc3450">T
+    <span id="titleE" style="color:#fe8f12 ">E
+        <span id="titleT2" style="color: #ffd523">T
+            <span id="titleR" style="color: #5ddf3f">R
+                <span id="titleI" style="color:#1ff1ff ">I
+                    <span id="titleS" style="color: #f52bf7">S
+                    </span>
+                </span>
+            </span>
+        </span>
+    </span>
+</span>
+</h1>
+<div id="grid">
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+</div>
+<audio src="Pictures_Sound/tetris.mp3"></audio>
+<div id="score">0</div>
+<script src="arrays.js"></script>
+<script>
+
+    var grid = generateGridArray();
+    console.log(grid);
+
+    function colorCell(cell, color) {
+        cell.style.background = color;
+        return cell.style.background;
+
+    }
+
+    function reset(cell) {
+        if (cell !== undefined) {
+            return cell.style.background;
+        }
+    }
+
+    function getColorCell(cell) {
+        if (cell !== undefined) {
+            return cell.style.background;
+        }
+        return '';
+    }
+
+    function generateGridArray() {
+        var cells = document.querySelectorAll('.cell');
+        var grid = [];
+        var x = 0;
+        var y = 0;
+        for (var i = 0; i < cells.length; i++) {
+            var cell = cells[i];
+            console.log(cell)
+            //var x = (i % 10);
+            //var y = Math.floor(i / 10);
+            // Wenn in noch kein Array in grid[x] initialisiert wurde, tun wir das.
+            if (!grid[x]) {
+                grid[x] = [];
+            }
+            grid[x][y] = cell;
+            x++;
+            if (x > 9) {
+                x = 0;
+                y++;
+            }
+        }
+        return grid;
+
+
+    }
+
+
+    const farbe = ["#00f1f1", "#00008b", "#efa002", "#efa002", "#00f000", "#00f000", "#f00100"]
+    var score = 0;
+    var sleepSec = 0.5
+    globalThis.x6 = 0;
+    globalThis.y6 = 0;
+    RotationValue = 0;
+    blockFaellt(4, 0);
+    random();
+    //alert(grid[0].length) // Höhe
+    //alert(grid.length) // Länge
+    //alert(allForms[ramdomNmbr][RotationValue].shape[0].length) // Länge
+    // alert(allForms[ramdomNmbr][RotationValue].shape.length) // Höhe
+    function random() {
+        globalThis.colorRandom = farbe[Math.floor(Math.random() * farbe.length)]; // picks random color from array Farbe
+        globalThis.ramdomNmbr = Math.floor(Math.random() * 7); // picks a random Number, random Number = Random Form
+        //globalThis.ramdomNmbr = 3
+        //RotationValue = 1
+        console.warn(allForms[ramdomNmbr][RotationValue].type);
+    }
+
+
+    function drawBlock(x, y) {
+        i = 0;
+        j = 0;
+        while (j < allForms[ramdomNmbr][RotationValue].shape[0].length + 1 && i < allForms[ramdomNmbr][RotationValue].shape.length) { // goes through the array from left to right
+            if (allForms[ramdomNmbr][RotationValue].shape[i][j] == 1) {
+                colorCell(grid[x + j][y + i], colorRandom); // Draws the block
+                j++;
+            } else {
+                j++;
+            }
+            if (j == allForms[ramdomNmbr][RotationValue].shape[0].length + 1) { //
+                j = 0;
+                i++;
+            }
+        }
+    }
+
+
+    function removeBlock(x, y) {
+        i = 0;
+        j = 0;
+        while (j < allForms[ramdomNmbr][RotationValue].shape[0].length + 1 && i < allForms[ramdomNmbr][RotationValue].shape.length) {
+            if (allForms[ramdomNmbr][RotationValue].shape[i][j] == 1) {
+                colorCell(grid[x + j][y + i], "") // removes block
+                j++;
+            } else {
+                j++;
+            }
+            if (j == allForms[ramdomNmbr][RotationValue].shape[0].length + 1) {
+                j = 0;
+                i++;
+            }
+        }
+    }
+
+    setInterval(blockFaellt)
+
+    async function blockFaellt(x, y) {
+        let firstSpawn = 0;
+        let iY = 0;
+        let jX = 0;
+
+        while (y < grid[0].length) {
+            await sleep(sleepSec)
+            if (firstSpawn == 0) { // if first spawn draw block and wait so you can see the block spawn in the first row
+                drawBlock(x, y);
+                await sleep(sleepSec)
+                firstSpawn++;
+            }
+            if (firstSpawn > 0 && y < grid[0].length || getColorCell(grid[x][y + 2] == "")) {
+                if (collision(1)) {
+                    spawnNewBlock();
+                }
+                removeBlock(x, y);
+                drawBlock(x, y + 1);
+
+                //checkGameover();
+                firstSpawn = 0;
+                iY = 0; //Y
+                jX = 0; // X
+
+
+            }
+            y++;
+
+            if (collision(1)) {
+                spawnNewBlock();
+                if (collision(0)) {
+                    await sleep(sleepSec)
+                    gameOver();
+                }
+            }
+
+
+            function collision(moveY) {
+                var iY = 0;
+                var jX = 0;
+                while (jX < allForms[ramdomNmbr][RotationValue].shape[0].length && iY < allForms[ramdomNmbr][RotationValue].shape.length) {
+                    if (iY == allForms[ramdomNmbr][RotationValue].shape.length - 1) { // Letzte Reihe
+                        if (allForms[ramdomNmbr][RotationValue].shape[iY][jX] == 0) { // dont care for collision
+                        } else if (allForms[ramdomNmbr][RotationValue].shape[iY][jX] == 1) {// care for collision
+                            if (getColorCell(grid[x + jX][y + iY + moveY]) !== "" || grid[x + jX][y + iY + moveY] == grid[0].length - 1) {
+                                console.info("collision if" + iY + jX + allForms[ramdomNmbr][RotationValue].shape[iY][jX])
+                                return true;
+
+                            }
+                        }
+                        jX++;
+                    } else {
+                        if (iY !== allForms[ramdomNmbr][RotationValue].shape.length - 1 && allForms[ramdomNmbr][RotationValue].shape[iY + moveY][jX] == 1) { // dont care for collision
+                        } else if (allForms[ramdomNmbr][RotationValue].shape[iY + moveY][jX] == 0 && allForms[ramdomNmbr][RotationValue].shape[iY][jX] == 1) {// care for collision
+                            if (getColorCell(grid[x + jX][y + iY + moveY]) !== "" || grid[x + jX][y + iY + moveY] == grid[0].length) { // Check if can colide
+                                console.info("collision else " + iY + jX + allForms[ramdomNmbr][RotationValue].shape[iY][jX]); // colided
+                                return true;
+
+                            }
+                        }
+                        jX++;
+                        if (jX == allForms[ramdomNmbr][RotationValue].shape[0].length) { // if right side of array is reached, go one row down
+                            iY++;
+                            jX = 0;
+                        }
+                    }
+
+                }
+                return false;
+            }
+
+            function collisionSide(moveX) {
+                console.log("collsionSide")
+                var iY = 0;
+                var jX = 0;
+                while (iY < allForms[ramdomNmbr][RotationValue].shape.length) {
+                    if (moveX < 0 && jX == 0) {
+                        if (allForms[ramdomNmbr][RotationValue].shape[iY][jX] == 1) {
+                            if (getColorCell(grid[x + jX + moveX][y + iY]) !== "") {
+                                return true;
+                            }
+                        }
+                    } else if (moveX > 0 && jX == allForms[ramdomNmbr][RotationValue].shape[0].length - 1) {
+                        if (allForms[ramdomNmbr][RotationValue].shape[iY][jX] == 1) {
+                            if (getColorCell(grid[x + jX + moveX][y + iY]) !== "") {
+                                console.log("ich werde aufgerufen!")
+                                return true;
+                            }
+                        }
+                    }
+                    jX++;
+                    if (jX == allForms[ramdomNmbr][RotationValue].shape[0].length) { // if right side of array is reached, go one row down
+                        iY++;
+                        jX = 0;
+                    }
+
+                }
+                return false;
+            }
+
+            async function collisionRotation() {
+                var iY = 0;
+                var jX = 0;
+                var saveX = 0;
+                var saveY = 0;
+                var newRota = 0;
+                i = 1;
+                while (i == 1 && jX < allForms[ramdomNmbr][RotationValue].shape[0].length && iY < allForms[ramdomNmbr][RotationValue].shape.length) {
+                    if (allForms[ramdomNmbr][RotationValue].shape[iY][jX] == 1) {
+                        alert(RotationValue)
+                        saveX = x;
+                        saveY = y;
+                        RotationValue++
+                        newRota = RotationValue;
+                        drawBlock(x, y)
+                        try {
+                            alert(i)
+                            if (x + jX > grid.length && newRota == RotationValue) {
+                                removeBlock(x, y)
+                                console.log("remove block")
+                                RotationValue--;
+                                console.log("RotationValue--")
+                                drawBlock(saveX, saveY);
+                                alert("true")
+                                return true;
+                                i++;
+                            }
+                            removeBlock(x, y)
+                        }catch (err){
+                            return true;
+                        }
+                    }
+
+                    jX++;
+                    if (jX == allForms[ramdomNmbr][RotationValue].shape[0].length) { // if right side of array is reached, go one row down
+                        iY++;
+                        jX = 0;
+                    }
+
+                }
+                return false;
+            }
+
+
+            function spawnNewBlock() {
+                clearRows();
+                random();
+                x = 4
+                y = 0
+                RotationValue = 0
+            }
+
+
+            if (y == grid[0].length - allForms[ramdomNmbr][RotationValue].shape.length) { // Position check + Kollision:!!!!
+                spawnNewBlock();
+            }
+
+
+            document.onkeydown = (e) => { // move Block right
+                var e = e || window.event;
+                if (e.key === 'ArrowRight') {
+                    if (x < grid.length - allForms[ramdomNmbr][RotationValue].shape[0].length && !collisionSide(1)) {
+                        removeBlock(x, y)
+                        drawBlock(x + 1, y)
+                        x++;
+                        //   }
+                        // }
+                    }
+                }
+                var e = e || window.event; // move Block Left
+                if (e.key === 'ArrowLeft') {
+                    if (y < grid[0].length || getColorCell(grid[x - 1][y] !== "")) {
+                        if (x > 0 && !collisionSide(-1)) {
+                            removeBlock(x, y)
+                            drawBlock(x - 1, y)
+                            x--;
+                        }
+                    }
+                }
+                if (e.key === "ArrowDown") {
+                    sleepSec = 0.05;
+                    document.onkeyup = (e2) => {
+                        var e = e || window.event;
+                        if (e2.key === "ArrowDown") {
+                            sleepSec = 0.5;
+                        }
+                    }
+                }
+                var e = e || window.event; // Rotate block
+                if (e.key === 'ArrowUp'  && RotationValue <= 3) { //&& !collisionRotation()
+                    try {
+                        removeBlock(x, y)
+                        RotationValue++;
+                        drawBlock(x, y)
+                    } catch (err) {
+                        // WIP !!!!
+                    }
+
+                }
+                if (RotationValue > 3) {
+                    RotationValue = 0;
+                }
+
+            }
+        }
+
+
+        function clearRows() {
+
+            var checkx1 = 0;
+            var checky1 = grid[0].length - 1;
+            var coloredConsecutive = 0;
+            var i = 0;
+            while (checkx1 < 10) { // goes from left to right
+                if (getColorCell(grid[checkx1][checky1]) !== "") {
+                    checkx1++;
+                    coloredConsecutive++; // Checks for how many cells are colored back 2 back
+                    if (coloredConsecutive == 10) { // if whole row is colored
+                        while (i < 10) {
+                            colorCell(grid[i][checky1], ""); // removes color from every cell of the row with all cells colored
+                            i++;
+                        }
+                        moveRows()
+                        coloredConsecutive = 0;
+                        score = score + 100;
+                        document.getElementById("score").innerHTML = score; // updates score
+
+                    }
+
+                } else {
+                    checky1--;
+                    checkx1 = 0;
+                    coloredConsecutive = 0;
+                    if (checky1 == 0) {
+                        break;
+                    }
+                }
+
+            }
+
+            function moveRows() {
+                var checkx3 = 0;
+                var checky3 = checky1;
+                while (checkx3 < 10 && checky3 > 0) {
+                    while (getColorCell(grid[checkx3][checky3]) !== "") { // if cell is colored
+                        if (getColorCell(grid[checkx3][checky3 + 1]) == "" && checky3 + 1 < grid[0].length) { // Check if there is place for it to move down
+                            colorCell(grid[checkx3][checky3 + 1], getColorCell(grid[checkx3][checky3])); // Color the cell below
+                            colorCell(grid[checkx3][checky3], ""); //discolor the old cell
+
+                        }
+                    }
+                    checkx3++;
+                    if (checkx3 > 9) {
+                        checky3--;
+                        checkx3 = 0;
+
+                    }
+
+
+                }
+            }
+        }
+
+
+        function gameOver() {
+            if (confirm("Game over, You suck! \n Willst  nochmal spielen?")) { // Gameover "Screen" + neu start frage
+                var yClear = grid[0].length - 1;
+                var xClear = 9;
+                score = 0;
+                document.getElementById("score").innerHTML = score;
+                while (xClear > 0) { // säubern des Spielfeldes von links nach rechts und immer +1 nach unten;
+                    colorCell(grid[xClear][yClear], "")  // discolor cells
+                    xClear--;
+                    if (xClear == 0 && yClear >= 0) {
+                        colorCell(grid[xClear][yClear], "")
+                        if (xClear == 0 && yClear != 0) {
+                            yClear--;
+                            xClear = 9;
+                            test3 = 0;
+                            y = 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        function music() {
+            var audio = new Audio('Tetris/Pictures_Sound/tetris.mp3');
+            audio.play();
+        }
+
+
+        async function sleep(seconds) {
+            return new Promise(resolve => setTimeout(resolve, seconds * 1000))
+        }
+    }
+
+</script>
+</body>
+</html>

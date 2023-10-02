@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mainscreen</title>
+    <link rel="stylesheet" href="startPage.css">
+</head>
+<body>
+
+<button onclick="location.href = 'Tetris.html'; " id="play" type="button">PLAY</button>
+<button id="options" type="button">OPTIONS</button>
+<button id="quit" type="button">QUIT</button>
+
+<div class="animation-area">
+    <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<section id="formen">
+    <div id="figure1">
+        <div class="tetris_Block1"></div>
+        <div class="tetris_Block1"></div>
+        <div class="tetris_Block1"></div>
+        <div class="tetris_Block1"></div>
+    </div>
+
+    <div id="figure2">
+        <div class="tetris_Block2"></div>
+        <div class="tetris_Block2"></div>
+    </div>
+    <div id="figure2b">
+        <div class="tetris_Block2b"></div>
+        <div class="tetris_Block2b"></div>
+    </div>
+
+
+    <div id="figure3">
+        <div class="tetris_Block3"></div>
+        <div class="tetris_Block3"></div>
+    </div>
+    <div id="figure3b">
+        <div class="tetris_Block3b"></div>
+        <div class="tetris_Block3b"></div>
+    </div>
+
+
+    <div id="figure4">
+        <div class="tetris_Block4"></div>
+        <div class="tetris_Block4"></div>
+        <div class="tetris_Block4"></div>
+    </div>
+    <div id="figure4b">
+        <div class="tetris_Block4b"></div>
+    </div>
+    <div id="figure5">
+        <div class="tetris_Block5"></div>
+        <div class="tetris_Block5"></div>
+        <div id="figure5b">
+            <div class="tetris_Block5b"></div>
+            <div class="tetris_Block5b"></div>
+        </div>
+
+    </div>
+
+
+</section>
+<script>
+
+    document.getElementById("play").onclick = function () {
+        location.href = "Tetris.html";
+    };
+    document.getElementById("options").onclick = function () {
+        location.href = "Tetris.html";
+    };
+    document.getElementById("quit").onclick = function () {
+        window.location.replace("http://www.google.com");
+    };
+
+    setInterval(random1, 7000)
+    setInterval(random2, 7000)
+    setInterval(random3, 7000)
+    setInterval(random4, 10000)
+    setInterval(random5, 7000)
+    const farbe = ["#00f1f1", "#00008b", "#efa002", "#efa002", "#00f000", "#00f000", "#f00100"]
+
+    function random1() {
+        var rndmNmbr = Math.floor(Math.random() * 91);
+        document.getElementById("figure1").style.marginLeft = rndmNmbr + "%";
+    }
+
+    function random2() {
+        var rndmNmbr2 = Math.floor(Math.random() * 91);
+        document.getElementById("figure2").style.marginLeft = rndmNmbr2 + "%";
+        document.getElementById("figure2b").style.marginLeft = rndmNmbr2 + "%";
+        console.info(rndmNmbr2)
+    }
+
+    function random3() {
+        var rndmNmbr3 = Math.floor(Math.random() * 91);
+        document.getElementById("figure3").style.marginLeft = rndmNmbr3 + "%";
+        document.getElementById("figure3b").style.marginLeft = rndmNmbr3 + "%";
+        console.info(rndmNmbr3)
+    }
+
+    function random4() {
+        var rndmNmbr4 = Math.floor(Math.random() * 91);
+        document.getElementById("figure4").style.marginLeft = rndmNmbr4 + "%";
+        document.getElementById("figure4b").style.marginLeft = rndmNmbr4 + 1.9 + "%";
+        console.info(rndmNmbr4)
+    }
+
+    function random5(){
+        var rndmNmbr5 = Math.floor(Math.random() * 91);
+        document.getElementById("figure5").style.marginLeft = rndmNmbr5 + "%";
+        document.getElementById("figure5b").style.marginLeft = rndmNmbr5 + "%";
+        console.info(rndmNmbr5)
+    }
+
+</script>
+</body>
+</html>

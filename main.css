@@ -1,0 +1,51 @@
+@import url('http://fonts.cdnfonts.com/css/common-pixel');
+@import url('http://fonts.cdnfonts.com/css/tetris');
+
+body {
+    background-color: #192734;
+}
+
+.row {
+    border: 1px solid black;
+}
+
+.cell {
+    border: 1px solid black;
+}
+
+
+#grid {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#grid .row {
+    display: flex;
+    width: 300px;
+    height: 30px;
+}
+
+#grid .cell {
+    width: 30px;
+    height: 30px;
+    background: #000000;
+    border: 2px solid black;
+}
+
+#grid .cell.blue {
+    background: blue;
+}
+
+#score {
+    color: #FFFFFF;
+    margin-left: 250px;
+    font-size: 75px;
+    font-family: 'Common Pixel', sans-serif;
+    position: fixed;
+}
+
+#title {
+    font-family: 'Tetris', sans-serif;
+    text-align: center;
+}
